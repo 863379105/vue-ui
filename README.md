@@ -1,5 +1,8 @@
 # vue-ui
 
+通过Vue写的一个前端ui框架
+使用是请在css中设置 `box-sizing: border-box`
+
 ## Project setup
 ```
 npm install
@@ -20,5 +23,3 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
