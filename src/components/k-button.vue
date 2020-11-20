@@ -1,9 +1,14 @@
 <template>
-    <button class="k-button"><slot></slot></button>
+    <button class="k-button">
+        <k-icon v-if="iconName" :name="iconName" ></k-icon>
+        <slot></slot>
+    </button>
 </template>
 <script>
+
     export default {
-        name : 'k-button'
+        name : 'k-button',
+        props:['iconName']
     }
 </script>
 <style scoped>
@@ -14,6 +19,10 @@
         border-radius: var(--border-radius);
         border:1px solid var(--border-color);
         background-color: var(--button-bg);
+        display: inline-flex;
+        justify-items: center;
+        align-items: center;
+        vertical-align: middle;
     }
     .k-button:hover{
         border: 1px solid var(--border-color-hover);
@@ -23,5 +32,8 @@
     }
     .k-button:focus{
         outline: none;
+    }
+    .k-button svg{
+        margin-right: 0.3em;
     }
 </style>

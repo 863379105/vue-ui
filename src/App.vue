@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <k-button>按钮</k-button>
+    <div>
+      <k-button iconName='setting' >设置</k-button>
+      <k-button iconName='download'>下载</k-button>
+      <k-button iconName='upload'>上传</k-button>
+    </div>
     <div>
       <k-icon name='download'></k-icon>
       <k-icon name='setting'></k-icon>
@@ -11,15 +15,8 @@
 </template>
 
 <script>
-import kButton from './components/k-button.vue'
-import kIcon from './components/k-icon.vue'
-
 export default {
   name: 'App',
-  components: {
-    kButton,
-    kIcon
-  }
 }
 </script>
 
