@@ -1,5 +1,5 @@
 <template>
-    <button class="k-button">按钮</button>
+    <button class="k-button"><slot></slot></button>
 </template>
 <script>
     export default {
