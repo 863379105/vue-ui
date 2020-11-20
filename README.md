@@ -1,7 +1,7 @@
 # vue-ui
 
 通过Vue写的一个前端ui框架
-使用是请在css中设置 `box-sizing: border-box`
+使用时请在css中设置 `box-sizing: border-box`
 
 ## Project setup
 ```
