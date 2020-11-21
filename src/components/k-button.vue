@@ -1,6 +1,6 @@
 <template>
     <button class="k-button">
-        <k-icon v-if="iconName" :name="iconName" ></k-icon>
+        <k-icon v-if="iconName" :name="iconName" :position="iconPosition"></k-icon>
         <slot></slot>
     </button>
 </template>
@@ -8,7 +8,13 @@
 
     export default {
         name : 'k-button',
-        props:['iconName']
+        props:{
+            'iconName':String,
+            'iconPosition':{
+                type : String,
+                default : 'left'
+            }
+        }
     }
 </script>
 <style scoped>
@@ -23,6 +29,7 @@
         justify-items: center;
         align-items: center;
         vertical-align: middle;
+        order: 1;
     }
     .k-button:hover{
         border: 1px solid var(--border-color-hover);
