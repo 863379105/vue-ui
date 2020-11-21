@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <div>
-      <k-button iconName='setting' >设置</k-button>
+      <k-button iconName='setting' iconPosition='right'>设置</k-button>
       <k-button iconName='download'>下载</k-button>
       <k-button iconName='upload'>上传</k-button>
+      <k-button iconName='left'>前进</k-button>
+      <k-button iconName='right' iconPosition='right'>后退</k-button>
     </div>
     <div>
       <k-icon name='download'></k-icon>
