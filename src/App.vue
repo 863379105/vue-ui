@@ -4,8 +4,12 @@
       <k-button iconName='setting' iconPosition='right'>设置</k-button>
       <k-button iconName='download'>下载</k-button>
       <k-button iconName='upload'>上传</k-button>
-      <k-button iconName='left'>前进</k-button>
-      <k-button iconName='right' iconPosition='right'>后退</k-button>
+      <k-group>
+        <k-button iconName='left'>上一页</k-button>
+        <k-button iconName='download'>下载</k-button>
+        <k-button iconName='upload'>上传</k-button>
+        <k-button iconName='right' iconPosition='right'>下一页</k-button>
+      </k-group>
     </div>
     <div>
       <k-icon name='download'></k-icon>
