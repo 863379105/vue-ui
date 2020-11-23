@@ -6,8 +6,7 @@
       <k-button iconName='upload'>上传</k-button>
       <k-group>
         <k-button iconName='left'>上一页</k-button>
-        <k-button iconName='download'>下载</k-button>
-        <k-button iconName='upload'>上传</k-button>
+        <k-button>更多</k-button>
         <k-button iconName='right' iconPosition='right'>下一页</k-button>
       </k-group>
     </div>
@@ -16,6 +15,12 @@
       <k-icon name='setting'></k-icon>
       <k-icon name='loading'></k-icon>
       <k-icon name='upload'></k-icon>
+      <k-icon name='error'></k-icon>
+    </div>
+    <div>
+      <k-input value='张三'></k-input>
+      <k-input value='李四' disabled></k-input>
+      <k-input error='姓名不能为空'></k-input>
     </div>
   </div>
 </template>
