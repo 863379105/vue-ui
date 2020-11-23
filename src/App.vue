@@ -16,13 +16,17 @@
       <k-icon name='loading'></k-icon>
       <k-icon name='upload'></k-icon>
       <k-icon name='error'></k-icon>
+      <k-icon name='info'></k-icon>
     </div>
     <div>
       <k-input></k-input>
-      <k-input v-model="msg"></k-input>
-      <k-input disabled></k-input>
-      <k-input error='姓名不能为空'></k-input>
       
+      <k-input disabled v-model='disMsg'></k-input>
+      <k-input error='姓名不能为空'></k-input>
+    </div>
+    <div>
+      <k-input v-model="msg"></k-input>
+      <span>{{msg}}</span>
     </div>
   </div>
 </template>
@@ -32,7 +36,8 @@ export default {
   name: 'App',
   data() {
     return {
-      msg:'输入...'
+      msg:'输入...',
+      disMsg:'禁用'
     }
   }
 }
