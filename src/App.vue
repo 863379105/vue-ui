@@ -18,9 +18,11 @@
       <k-icon name='error'></k-icon>
     </div>
     <div>
-      <k-input value='张三'></k-input>
-      <k-input value='李四' disabled></k-input>
+      <k-input></k-input>
+      <k-input v-model="msg"></k-input>
+      <k-input disabled></k-input>
       <k-input error='姓名不能为空'></k-input>
+      
     </div>
   </div>
 </template>
@@ -28,6 +30,11 @@
 <script>
 export default {
   name: 'App',
+  data() {
+    return {
+      msg:'输入...'
+    }
+  }
 }
 </script>
 
