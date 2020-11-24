@@ -1,5 +1,5 @@
 <template>
-    <div :class="`k-col k-col-${colspan}`">
+    <div class="k-col" :class="[colspan && `col-span-${colspan}`,offset && `col-offset-${offset}`]">
         <slot></slot>
     </div>
 </template>
@@ -7,9 +7,11 @@
 export default {
     name:'k-col',
     props:{
-        'colspan':{
-            type:String,
-            default:'1'
+        colspan:{
+            type:[String,Number],
+        },
+        offset:{
+            type:[String,Number],
         }
     }
 }
@@ -19,13 +21,20 @@ export default {
         height: 50px;
         background-color: grey;
         border: 1px solid red;
-        width: 50%;
+        width: 100%;
         
-        $class-prefix:k-col-;
+        $class-prefix:col-span-;
         @for $n from 1 through 24{
             &.#{$class-prefix}#{$n}{
                 width: ($n / 24) * 100%;
             }    
+        }
+
+        $class-prefix:col-offset-;
+        @for $n from 1 through 24{
+            &.#{$class-prefix}#{$n}{
+                margin-left: ($n /24) * 100%;
+            }
         }
     }
 </style>

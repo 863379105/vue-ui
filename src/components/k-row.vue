@@ -10,7 +10,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .k-row{
-        display: inline-flex;
+        display: flex;
         width: 100%;
     }
 </style>
