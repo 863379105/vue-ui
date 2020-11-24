@@ -28,6 +28,24 @@
       <k-input v-model="msg"></k-input>
       <span>{{msg}}</span>
     </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+    <div class="row">
+      <div class="col" data-span='1'></div>
+      <div class="col"></div>
+    </div>
+    <k-row>
+      <k-col colspan='6'></k-col>
+      <k-col colspan='10'></k-col>
+      <k-col colspan='2'></k-col>
+    </k-row>
   </div>
 </template>
 
@@ -44,11 +62,7 @@ export default {
 </script>
 
 <style>
-  *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  *{padding: 0;margin: 0;box-sizing: border-box;}
   :root{
     --button-height:32px;
     --font-size:14px;
@@ -59,7 +73,18 @@ export default {
     --border-color:#999;
     --border-color-hover:#666;
   }
-  body{
-    font-size: var(--font-size);
+  body{font-size: var(--font-size);}
+  .row{
+    width: 100%;
+    display: inline-flex;
+  }
+  .col{
+    height: 50px;
+    background-color: grey;
+    border: 1px solid red;
+    width: 50%;
+  }
+  .col[data-span='1']{
+    width: 8%
   }
 </style>
