@@ -1,7 +1,5 @@
 <template>
-    <div class="k-col" 
-        :class="[colspan && `col-span-${colspan}`,offset && `col-offset-${offset}`]"
-        :style="colStyle">
+    <div class="k-col" :class="colClass" :style="colStyle">
         <div style="border:1px solid green;height:50px">
             <slot></slot>
         </div>
@@ -29,6 +27,13 @@ export default {
                 paddingLeft:this.gutter/2+'px',
                 paddingRight:this.gutter/2+'px'
             }
+        },
+        colClass(){
+
+            return [
+                this.colspan && `col-span-${this.colspan}`,
+                this.offset && `col-offset-${this.offset}`
+            ]
         }
     }
 }
