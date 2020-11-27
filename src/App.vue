@@ -32,11 +32,55 @@
       <k-col colspan='6'></k-col>
       <k-col colspan='10' offset='2'></k-col>
     </k-row>
-    <k-row>
+    <k-row >
+      <k-col>1</k-col>
+      <k-col></k-col>
+    </k-row>
+    <k-row >
+      <k-col>1</k-col>
+      <k-col></k-col>
+      <k-col></k-col>
+    </k-row>
+    <k-row >
+      <k-col>1</k-col>
       <k-col></k-col>
       <k-col></k-col>
       <k-col></k-col>
     </k-row>
+    <k-row >
+      <k-col>1</k-col>
+      <k-col></k-col>
+      <k-col></k-col>
+      <k-col></k-col>
+      <k-col></k-col>
+    </k-row>
+    <k-row gutter='20'>
+      <k-col>1</k-col>
+      <k-col></k-col>
+    </k-row>
+    <k-row gutter='20'>
+      <k-col></k-col>
+      <k-col></k-col>
+      <k-col></k-col>
+    </k-row>
+    <k-row gutter='20'>
+      <k-col></k-col>
+      <k-col></k-col>
+      <k-col></k-col>
+      <k-col></k-col>
+    </k-row>
+    <k-row gutter='20'>
+      <k-col>1</k-col>
+      <k-col>1</k-col>
+      <k-col></k-col>
+      <k-col></k-col>
+      <k-col></k-col>
+    </k-row>
+     <k-row gutter='20'>
+      <k-col colspan='2'>1</k-col>
+      <k-col colspan='22'>1</k-col>
+    </k-row>
+    
   </div>
 </template>
 
@@ -54,6 +98,9 @@ export default {
 
 <style>
   *{padding: 0;margin: 0;box-sizing: border-box;}
+  body{
+    overflow-x: hidden;
+  }
   :root{
     --button-height:32px;
     --font-size:14px;
