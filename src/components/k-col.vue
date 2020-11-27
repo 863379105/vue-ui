@@ -1,7 +1,7 @@
 <template>
     <div class="k-col" 
         :class="[colspan && `col-span-${colspan}`,offset && `col-offset-${offset}`]"
-        :style="{paddingLeft:gutter/2+'px',paddingRight:gutter/2+'px'}">
+        :style="colStyle">
         <div style="border:1px solid green;height:50px">
             <slot></slot>
         </div>
@@ -21,6 +21,14 @@ export default {
         },
         offset:{
             type:[String,Number],
+        }
+    },
+    computed:{  
+        colStyle(){
+            return {
+                paddingLeft:this.gutter/2+'px',
+                paddingRight:this.gutter/2+'px'
+            }
         }
     }
 }

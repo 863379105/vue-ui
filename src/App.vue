@@ -59,12 +59,12 @@
       <k-col></k-col>
     </k-row>
     <k-row gutter='20'>
-      <k-col></k-col>
+      <k-col>1</k-col>
       <k-col></k-col>
       <k-col></k-col>
     </k-row>
     <k-row gutter='20'>
-      <k-col></k-col>
+      <k-col>1</k-col>
       <k-col></k-col>
       <k-col></k-col>
       <k-col></k-col>
