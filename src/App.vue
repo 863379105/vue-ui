@@ -76,11 +76,10 @@
       <k-col></k-col>
       <k-col></k-col>
     </k-row>
-     <k-row gutter='20'>
-      <k-col colspan='2'>1</k-col>
-      <k-col colspan='22'>1</k-col>
+     <k-row>
+      <k-col colspan='2' :phone="{colspan:22}">1</k-col>
+      <k-col colspan='22' :phone="{colspan:2}">1</k-col>
     </k-row>
-    
   </div>
 </template>
 
