@@ -55,7 +55,8 @@ export default {
                 ...(this.widePc ? [`widePc-col-span-${this.widePc.colspan}`] : []),
             ]
         }
-    }
+    },
+    methods:{}
 }
 </script>
 <style lang="scss" scoped>

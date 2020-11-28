@@ -58,6 +58,24 @@
         :narrowPc="{colspan:18}" :ipad="{colspan:14}" :phone="{colspan:12}">
       </k-col>
     </k-row>
+    <k-layout style="height:100vh">
+      <k-header>header</k-header>
+      <k-layout>
+        <k-sider>silder</k-sider>
+        <k-content>content</k-content>
+      </k-layout>
+      <k-footer>footer</k-footer>
+    </k-layout>
+    <k-layout style="height:100vh">
+      <k-sider>silder</k-sider>
+      <k-layout>
+        <k-header>header</k-header>
+        <k-content>content</k-content>
+        <k-footer>footer</k-footer>
+      </k-layout>
+      
+    </k-layout>
+
   </div>
 </template>
 
