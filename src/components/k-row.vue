@@ -30,6 +30,7 @@ export default {
 <style lang="scss" scoped>
     .k-row{
         display: flex;
+        flex-wrap: wrap;
         border: 1px black solid;
     }
 </style>

@@ -6,6 +6,16 @@
     </div>
 </template>
 <script>
+let validator = (value)=>{
+    let keys = Object.keys(value)
+    let flag = true
+    keys.forEach((key)=>{
+        if(!['colspan','offset'].includes(key)){
+            flag = false
+        }
+    })
+    return flag
+}
 export default {
     name:'k-col',
     data() {
@@ -20,19 +30,12 @@ export default {
         offset:{
             type:[String,Number],
         },
-        phone:{
-            type : Object,
-            validator(value){
-                let keys = Object.keys(value)
-                let flag = true
-                keys.forEach((key)=>{
-                    if(!['colspan','offset'].includes(key)){
-                        flag = false
-                    }
-                })
-                return flag
-            }
-        }
+        phone:{type : Object,validator},
+        ipad:{type : Object,validator},
+        narrowPc:{type : Object,validator},
+        pc:{type : Object,validator},
+        widePc:{type : Object,validator},
+
     },
     computed:{  
         colStyle(){
@@ -42,17 +45,14 @@ export default {
             }
         },
         colClass(){
-            let phoneClass = []
-            // let {phone} = this
-            // console.log(this.phone);
-            if(this.phone){
-                phoneClass = [`phone-col-span-${this.phone.colspan}`]
-            }
-            // console.log(...phoneClass);
             return [
                 this.colspan && `col-span-${this.colspan}`,
                 this.offset && `col-offset-${this.offset}`,
-                ...phoneClass
+                ...(this.phone ? [`phone-col-span-${this.phone.colspan}`] : []),
+                ...(this.ipad ? [`ipad-col-span-${this.ipad.colspan}`] : []),
+                ...(this.narrowPc ? [`narrowPc-col-span-${this.narrowPc.colspan}`] : []),
+                ...(this.pc ? [`pc-col-span-${this.pc.colspan}`] : []),
+                ...(this.widePc ? [`widePc-col-span-${this.widePc.colspan}`] : []),
             ]
         }
     }
@@ -86,6 +86,66 @@ export default {
             }
 
             $class-prefix:phone-col-offset-;
+            @for $n from 1 through 24{
+                &.#{$class-prefix}#{$n}{
+                    margin-left: ($n /24) * 100%;
+                }
+            }
+        }
+        @media (min-width:'576px')and(max-width:'768px') {
+            $class-prefix:ipad-col-span-;
+            @for $n from 1 through 24{
+                &.#{$class-prefix}#{$n}{
+                    width: ($n / 24) * 100%;
+                }    
+            }
+
+            $class-prefix:ipad-col-offset-;
+            @for $n from 1 through 24{
+                &.#{$class-prefix}#{$n}{
+                    margin-left: ($n /24) * 100%;
+                }
+            }
+        }
+        @media (min-width:'768px')and(max-width:'992px') {
+            $class-prefix:narrowPc-col-span-;
+            @for $n from 1 through 24{
+                &.#{$class-prefix}#{$n}{
+                    width: ($n / 24) * 100%;
+                }    
+            }
+
+            $class-prefix:narrowPc-col-offset-;
+            @for $n from 1 through 24{
+                &.#{$class-prefix}#{$n}{
+                    margin-left: ($n /24) * 100%;
+                }
+            }
+        }
+        @media (min-width:'992px')and(max-width:'1200px') {
+            $class-prefix:pc-col-span-;
+            @for $n from 1 through 24{
+                &.#{$class-prefix}#{$n}{
+                    width: ($n / 24) * 100%;
+                }    
+            }
+
+            $class-prefix:pc-col-offset-;
+            @for $n from 1 through 24{
+                &.#{$class-prefix}#{$n}{
+                    margin-left: ($n /24) * 100%;
+                }
+            }
+        }
+        @media (min-width:'1200px') {
+            $class-prefix:widePc-col-span-;
+            @for $n from 1 through 24{
+                &.#{$class-prefix}#{$n}{
+                    width: ($n / 24) * 100%;
+                }    
+            }
+
+            $class-prefix:widePc-col-offset-;
             @for $n from 1 through 24{
                 &.#{$class-prefix}#{$n}{
                     margin-left: ($n /24) * 100%;

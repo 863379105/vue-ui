@@ -32,53 +32,31 @@
       <k-col colspan='6'></k-col>
       <k-col colspan='10' offset='2'></k-col>
     </k-row>
-    <k-row >
-      <k-col>1</k-col>
-      <k-col></k-col>
+    <k-row>
+      <k-col colspan='12'></k-col>
+      <k-col colspan='12'></k-col>
     </k-row>
     <k-row >
-      <k-col>1</k-col>
-      <k-col></k-col>
-      <k-col></k-col>
-    </k-row>
-    <k-row >
-      <k-col>1</k-col>
-      <k-col></k-col>
-      <k-col></k-col>
-      <k-col></k-col>
-    </k-row>
-    <k-row >
-      <k-col>1</k-col>
-      <k-col></k-col>
-      <k-col></k-col>
-      <k-col></k-col>
-      <k-col></k-col>
+      <k-col colspan='8'></k-col>
+      <k-col colspan='8'></k-col>
+      <k-col colspan='8'></k-col>
     </k-row>
     <k-row gutter='20'>
-      <k-col>1</k-col>
-      <k-col></k-col>
+      <k-col colspan='12'></k-col>
+      <k-col colspan='12'></k-col>
     </k-row>
     <k-row gutter='20'>
-      <k-col>1</k-col>
-      <k-col></k-col>
-      <k-col></k-col>
-    </k-row>
-    <k-row gutter='20'>
-      <k-col>1</k-col>
-      <k-col></k-col>
-      <k-col></k-col>
-      <k-col></k-col>
-    </k-row>
-    <k-row gutter='20'>
-      <k-col>1</k-col>
-      <k-col>1</k-col>
-      <k-col></k-col>
-      <k-col></k-col>
-      <k-col></k-col>
+      <k-col colspan='8'></k-col>
+      <k-col colspan='8'></k-col>
+      <k-col colspan='8'></k-col>
     </k-row>
      <k-row>
-      <k-col colspan='2' :phone="{colspan:22}">1</k-col>
-      <k-col colspan='22' :phone="{colspan:2}">1</k-col>
+      <k-col colspan='2' :widePC="{colspan:2}" :pc="{colspan:4}" 
+        :narrowPc="{colspan:6}" :ipad="{colspan:10}" :phone="{colspan:12}">
+      </k-col>
+      <k-col colspan='22' :widePC="{colspan:22}" :pc="{colspan:20}" 
+        :narrowPc="{colspan:18}" :ipad="{colspan:14}" :phone="{colspan:12}">
+      </k-col>
     </k-row>
   </div>
 </template>
