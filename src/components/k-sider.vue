@@ -11,6 +11,5 @@ export default {
 <style lang="scss" scoped>
     .k-sider{
         border: 1px solid black;
-        
     }
 </style>

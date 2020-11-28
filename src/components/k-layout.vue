@@ -13,7 +13,7 @@ export default {
     },
     mounted(){
         this.$children.forEach((vm) => {
-            console.log(vm.$options.name);
+            // console.log(vm.$options.name);
             if(vm.$options.name === 'k-sider'){
                 this.hasSider = true
             }
